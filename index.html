@@ -13,23 +13,15 @@
         <form onsubmit="getWeather(event)">
             <input
                 type="text"
-                id="city-input"
+                id="city-name"
                 placeholder="Enter city name"
             >
-            <button type="submit">Search</button>
+            <button type="submit">Fetch</button>
         </form>
-        <p id="loading"></p>
-        <p id="error"></p>
-        <div class="weather-box">
-            <h2>Weather Information</h2>
-            <p>City: <span id="city-name"></span></p>
-            <p>Country: <span id="country-name"></span></p>
-            <p>Region: <span id="region-name"></span></p>
-            <p>Temperature: <span id="temp-value"></span></p>
-            <p>Feels Like: <span id="feels-value"></span></p>
-            <p>Humidity: <span id="humidity-value"></span></p>
-            <p>Wind Speed: <span id="wind-value"></span></p>
-
+        <div id="weather-result">
+            <div>
+                
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
