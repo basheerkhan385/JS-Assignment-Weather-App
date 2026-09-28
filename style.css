@@ -1,0 +1,271 @@
+
+/* Basic Settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1d4ed8);
+    min-height: 100vh;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Main Container */
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    background-color: #111c36;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid #263858;
+}
+
+/* Heading */
+
+h1 {
+    text-align: center;
+    font-size: 38px;
+    color: #60a5fa;
+    margin-bottom: 30px;
+}
+
+/* Search Form */
+
+form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #334155;
+    border-radius: 10px;
+    outline: none;
+    background-color: #1e293b;
+    color: white;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+input:focus {
+    border-color: #60a5fa;
+}
+
+/* Button */
+
+button {
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #2563eb;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Weather Cards */
+
+.weather-info {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(25% - 15px);
+    min-height: 130px;
+    margin: 7px;
+    padding: 20px 15px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+/* Card Hover */
+
+.weather-info:hover {
+    background-color: #263858;
+    border-color: #60a5fa;
+    transform: translateY(-5px);
+}
+
+/* Card Heading */
+
+.weather-info p:first-child {
+    color: #94a3b8;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Card Value */
+
+.weather-info p:last-child {
+    color: #60a5fa;
+    font-size: 22px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+/* Error Message */
+
+#error {
+    color: #f87171;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Loading Message */
+
+#loading {
+    color: #60a5fa;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   TABLET
+   Screen: 768px to 1024px
+========================= */
+
+@media (max-width: 1024px) {
+
+    .container {
+        max-width: 750px;
+        padding: 30px;
+    }
+
+    .weather-info {
+        width: calc(33.33% - 15px);
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   Screen: 576px to 767px
+========================= */
+
+@media (max-width: 767px) {
+
+    body {
+        align-items: flex-start;
+        padding: 25px 15px;
+    }
+
+    .container {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .weather-info {
+        width: calc(50% - 15px);
+        min-height: 120px;
+    }
+
+    .weather-info p:last-child {
+        font-size: 20px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+   Screen: 375px to 575px
+========================= */
+
+@media (max-width: 575px) {
+
+    .container {
+        padding: 22px 15px;
+    }
+
+    h1 {
+        font-size: 27px;
+        margin-bottom: 25px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .weather-info {
+        width: calc(50% - 15px);
+        padding: 16px 12px;
+        min-height: 115px;
+    }
+
+    .weather-info p:first-child {
+        font-size: 12px;
+    }
+
+    .weather-info p:last-child {
+        font-size: 18px;
+    }
+
+}
+
+
+/* =========================
+   EXTRA SMALL MOBILE
+   Screen: Below 375px
+========================= */
+
+@media (max-width: 374px) {
+
+    .container {
+        padding: 20px 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .weather-info {
+        width: 100%;
+        margin: 6px 0;
+        min-height: 100px;
+    }
+
+    .weather-info p:last-child {
+        font-size: 21px;
+    }
+
+}
